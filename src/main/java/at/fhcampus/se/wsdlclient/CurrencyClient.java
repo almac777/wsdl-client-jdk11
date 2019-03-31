@@ -16,7 +16,7 @@ public class CurrencyClient extends WebServiceGatewaySupport {
         exchangeCurrencyRequest.setRequest(currencyRequest);
         ExchangeCurrencyResponse response = (ExchangeCurrencyResponse) getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://localhost:8080/ws/exchangeCurrencyRequest",
+                        "http://localhost:8000/ws/", // http://localhost:8000/ws/exchangeCurrencyRequest
                         exchangeCurrencyRequest,
                         new SoapActionCallback("http://spring.io/guides/gs-producing-web-service/ExchangeCurrencyRequest")
                 );

@@ -15,11 +15,6 @@ public class WsdlclientApplication {
     @Bean
     CommandLineRunner lookup(CurrencyClient currencyClient) {
         return args -> {
-            String country = "Spain";
-
-            if (args.length > 0) {
-                country = args[0];
-            }
             ExchangeCurrencyResponse response = currencyClient.getExchangeRate("USD", 100, "EUR");
             System.out.println(response.getResponse().toCurrency + " " + response.getResponse().toCurrencyAmount);
         };

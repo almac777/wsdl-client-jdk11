@@ -18,7 +18,7 @@ public class CurrencyConfiguration {
     @Bean
     public CurrencyClient countryClient(Jaxb2Marshaller marshaller) {
         CurrencyClient client = new CurrencyClient();
-        client.setDefaultUri("http://localhost:8080/ws");
+        client.setDefaultUri("http://localhost:8000/ws");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
