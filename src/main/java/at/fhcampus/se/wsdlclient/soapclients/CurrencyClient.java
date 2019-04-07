@@ -1,4 +1,4 @@
-package at.fhcampus.se.wsdlclient;
+package at.fhcampus.se.wsdlclient.soapclients;
 
 import at.fhcampus.se.wsdlclient.exchange.CurrencyRequest;
 import at.fhcampus.se.wsdlclient.exchange.ExchangeCurrencyRequest;

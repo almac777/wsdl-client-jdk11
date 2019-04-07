@@ -1,5 +1,6 @@
-package at.fhcampus.se.wsdlclient;
+package at.fhcampus.se.wsdlclient.soapconfigs;
 
+import at.fhcampus.se.wsdlclient.soapclients.CurrencyClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
