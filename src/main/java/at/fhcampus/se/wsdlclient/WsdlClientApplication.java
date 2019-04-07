@@ -20,8 +20,8 @@ public class WsdlClientApplication {
         return args -> {
             AddResponse response1 = calculatorClient.add(10, 20);
             SubtractResponse response2 = calculatorClient.subtract(10, 20);
-            System.out.println(">> 10 + 20 " + response1.getOut());
-            System.out.println(">> 10 - 20 " + response2.getOut());
+            System.out.println(">> 10 + 20 = " + response1.getOut());
+            System.out.println(">> 10 - 20 = " + response2.getOut());
         };
     }
 
