@@ -1,5 +1,8 @@
 package at.fhcampus.se.wsdlclient;
 
+import at.fhcampus.se.wsdlclient.exchange.CurrencyRequest;
+import at.fhcampus.se.wsdlclient.exchange.ExchangeCurrencyRequest;
+import at.fhcampus.se.wsdlclient.exchange.ExchangeCurrencyResponse;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 

@@ -128,7 +128,26 @@
                                     <wsdl>http://localhost:8080/ws/exchange.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://spring.io/guides/gs-producing-web-service=at.fhcampus.se.wsdlclient</extraarg>
+                                        <extraarg>http://spring.io/guides/gs-producing-web-service=at.fhcampus.se.wsdlclient.exchange</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-sources-calculator</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>http://localhost:8080/ws/calculator.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://spring.io/guides/gs-producing-web-service=at.fhcampus.se.wsdlclient.calculator</extraarg>
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>

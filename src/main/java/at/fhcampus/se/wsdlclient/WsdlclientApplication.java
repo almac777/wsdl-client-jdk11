@@ -1,5 +1,6 @@
 package at.fhcampus.se.wsdlclient;
 
+import at.fhcampus.se.wsdlclient.calculator.AddResponse;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +14,10 @@ public class WsdlclientApplication {
     }
 
     @Bean
-    CommandLineRunner lookup(CurrencyClient currencyClient) {
+    CommandLineRunner lookup(CalculatorClient calculatorClient) {
         return args -> {
-            ExchangeCurrencyResponse response = currencyClient.getExchangeRate("USD", 100, "EUR");
-            System.out.println(response.getResponse().toCurrency + " " + response.getResponse().toCurrencyAmount);
+            AddResponse response = calculatorClient.add(10, 20);
+            System.out.println(">> " + response.getOut());
         };
     }
 
